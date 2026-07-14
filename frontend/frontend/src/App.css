@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* Theme Variables */
+.light-theme {
+  --root_background: #1f1f1f;
+  --body_background: white;
+  --navbar_background: white;
+  --navbar_text : black;
+  --body_color : white;
+  --link_color : rgb(0, 0, 0);
+  --link_hover_color : rgb(35, 35, 35);
+  --link_visited_color : purple;
+  --para-clr:black;
+  --cart_body_color: white;
+  --quantity-clr: rgb(0, 0, 0);
+  --button-clr: black;
+  --card-bg-clr: white;
+  --btn-bg: var(--navbar_background);
+  --btn-clr: black;
+  --category-hvr: rgb(200, 200, 200);
+  --search_result-bg: rgb(239, 239, 239);
+  --hr_line_card: black;
+}
+
+.dark-theme {
+  --root_background: white;
+  --body_background: #1f1f1f;
+  --navbar_background: black;
+  --navbar_text : white;
+  --body_color : black;
+  --link_color : rgb(255, 255, 255);
+  --link_hover_color : rgb(137, 137, 137);
+  --link_visited_color : purple;
+  --para-clr:white;
+  --cart_body_color: rgb(36, 35, 35);
+  --quantity-clr: rgb(255, 255, 255);
+  --button-clr: white;
+  --card-bg-clr: #2c2b2b;
+  --btn-bg: var(--navbar_background);
+  --btn-clr: white;
+  --category-hvr: rgb(115, 115, 115);
+  --search_result-bg: rgb(49, 49, 49);
+  --hr_line_card: rgb(255, 255, 255);
+}
+
+#root {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  background-color: var(--root_background);
+}
+
+/* ===== Price Range Slider ===== */
+.price-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: none;
+  background: transparent;
+}
+
+.price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #ef4444;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  cursor: pointer;
+  pointer-events: all;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.price-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 2px 8px rgba(239,68,68,0.4);
+}
+
+.price-slider::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #ef4444;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  cursor: pointer;
+  pointer-events: all;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.price-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 2px 8px rgba(239,68,68,0.4);
+}
