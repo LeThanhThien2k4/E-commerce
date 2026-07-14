@@ -1,22 +1,20 @@
-﻿Markdown
+﻿
+# 🛒 E-Commerce Project (Monorepo)
 
-\# 🛒 E-Commerce Project (Monorepo)
+Chào mừng bạn đến với dự án E-Commerce! Đây là một ứng dụng mua sắm trực tuyến (E-commerce) được xây dựng theo mô hình Full Stack sử dụng kiến trúc Monorepo để quản lý cả Frontend và Backend trong cùng một repository.
 
-Chào mừng bạn đến với dự án \*\*E-Commerce\*\*! Đây là một ứng dụng mua sắm trực tuyến (E-commerce) được xây dựng theo mô hình Full Stack sử dụng kiến trúc Monorepo để quản lý cả Frontend và Backend trong cùng một repository.
+---
 
-\---
+## 🛠️ Công nghệ sử dụng
 
-\## 🛠️ Công nghệ sử dụng
+* Frontend: ReactJS, TailwindCSS / Bootstrap (hoặc thư viện UI bạn dùng), Axios.
+* Backend: Spring Boot (Java), Spring Security, Hibernate / JPA.
+* Database: MySQL.
 
-* \*\*Frontend:\*\* ReactJS, TailwindCSS / Bootstrap (hoặc thư viện UI bạn dùng), Axios.
-* \*\*Backend:\*\* Spring Boot (Java), Spring Security, Hibernate / JPA.
-* \*\*Database:\*\* PostgreSQL.
+---
 
-\---
+## 📂 Cấu trúc thư mục dự án
 
-\## 📂 Cấu trúc thư mục dự án
-
-\```text
 
 E-commerce/
 
@@ -24,7 +22,8 @@ E-commerce/
 
 └── frontend/         # Source code của ReactJS (UI)
 
-🚀 Hướng dẫn cài đặt và chạy dự án (Local Setup)
+
+## 🚀 Hướng dẫn cài đặt và chạy dự án (Local Setup)
 
 Để chạy dự án này ở môi trường local, bạn hãy chắc chắn rằng máy tính đã được cài đặt sẵn:
 
@@ -32,26 +31,27 @@ Java SDK 17+
 
 Node.js (Khuyên dùng bản LTS)
 
-PostgreSQL
+MySQL
 
-Bước 1: Clone dự án về máy
+### Bước 1: Clone dự án về máy
 
 Mở terminal tại thư mục bạn muốn lưu trữ dự án và chạy lệnh sau:
 
-Bash
+```bash
 
 git clone [https://github.com/LeThanhThien2k4/E-commerce.git](https://github.com/LeThanhThien2k4/E-commerce.git)
 
 cd E-commerce
+```
 
-Bước 2: Thiết lập và chạy Backend (Spring Boot)
+### Bước 2: Thiết lập và chạy Backend (Spring Boot)
 
 Di chuyển vào thư mục backend:
 
-Bash
+```bash
 
 cd backend
-
+```
 Cấu hình Cơ sở dữ liệu (Database):
 
 Tạo một Database trống trong PostgreSQL của bạn (ví dụ đặt tên là: ecommerce\_db).
@@ -59,18 +59,19 @@ Tạo một Database trống trong PostgreSQL của bạn (ví dụ đặt tên 
 Tìm file cấu hình cấu trúc database tại src/main/resources/application.properties (hoặc application.yml).
 
 Cập nhật lại thông tin kết nối Database của bạn (username và password của PostgreSQL local):
+```bash
 
-Properties
+spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce\_db
 
-spring.datasource.url=jdbc:postgresql://localhost:5432/ecommerce\_db
+spring.datasource.username=YOUR\MYSQL\_USERNAME
 
-spring.datasource.username=YOUR\_POSTGRES\_USERNAME
+spring.datasource.password=YOUR\MYSQL\_PASSWORD
 
-spring.datasource.password=YOUR\_POSTGRES\_PASSWORD
 
-\# Tùy chọn tự động tạo bảng (chọn update hoặc create)
+# Tùy chọn tự động tạo bảng (chọn update hoặc create)
 
 spring.jpa.hibernate.ddl-auto=update
+```
 
 Khởi chạy ứng dụng Spring Boot:
 
@@ -78,43 +79,47 @@ Bạn có thể mở thư mục backend bằng các IDE như IntelliJ IDEA hoặ
 
 Hoặc chạy trực tiếp bằng terminal/cmd thông qua Maven:
 
-Bash
+```bash
 
-\# Trên Windows:
+# Trên Windows:
 
 mvnw.cmd spring-boot:run
 
-\# Trên Mac/Linux:
+# Trên Mac/Linux:
 
 ./mvnw spring-boot:run
+```
 
 Mặc định, Server backend sẽ khởi chạy tại: http://localhost:8080
 
-Bước 3: Thiết lập và chạy Frontend (ReactJS)
+### Bước 3: Thiết lập và chạy Frontend (ReactJS)
 
 Mở một cửa sổ terminal mới (đang ở thư mục gốc E-commerce) và thực hiện:
 
 Di chuyển vào thư mục frontend:
 
-Bash
+```bash
 
 cd frontend
 
+```
 Cài đặt các thư viện phụ thuộc (dependencies):
 
-Bash
-
+```bash
 npm install
+```
 
 Khởi chạy ứng dụng ReactJS:
 
-Bash
+```bash
 
 npm run dev
 
-\# Hoặc nếu dự án dùng Create React App:
+
+# Hoặc nếu dự án dùng Create React App:
 
 npm start
+```
 
 Mặc định, giao diện người dùng sẽ chạy tại: http://localhost:3000 (hoặc http://localhost:5173 nếu bạn dùng Vite).
 
